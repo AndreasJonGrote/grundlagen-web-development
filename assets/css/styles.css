@@ -1,0 +1,78 @@
+
+/* ==========================================================
+   GRUNDSTIL
+   ========================================================== */
+
+body {
+  font-family: 'Martel', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ==========================================================
+   HEADLINES
+   ========================================================== */
+
+h1 {
+  font-family: 'Martel', sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ==========================================================
+   AUSZEICHNUNGEN
+   ========================================================== */
+
+figcaption {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: right;
+}
+
+/* ==========================================================
+   BASIC STYLES
+   ========================================================== */
+
+figcaption {
+  padding: 15px 30px 0 0;
+}
+
+/* ==========================================================
+   LAYOUT
+   ========================================================== */
+
+header,
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 90px 0 15px 0;
+}
+
+h1, div.content {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+div.content {
+  padding-top: 45px;
+}
+
+figure {
+  margin: 0;
+}
+
+/* ==========================================================
+   BILDER
+   ========================================================== */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
