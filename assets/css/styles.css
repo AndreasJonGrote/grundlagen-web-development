@@ -1,23 +1,33 @@
+/* ##########################################################
+   TEIL 1: STANDARD
+   Schrift, Abstände und Breite der ganzen Seite.
+   Das steht so in jedem Projekt. Für die Beispiele ist es nicht wichtig.
+   ########################################################## */
 
 /* ==========================================================
    GRUNDSTIL
    ========================================================== */
 
+/* Schrift und Farben für die ganze Seite */
 body {
   font-family: 'Martel', sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
+  background-color: #fff;
+  color: #000;
+  hyphens: auto;
 }
 
 /* ==========================================================
    HEADLINES
    ========================================================== */
 
+/* Hauptüberschrift */
 h1 {
   font-family: 'Martel', sans-serif;
-  font-weight: 900;
-  font-size: 14px;
+  font-weight: 300;
+  font-size: 36px;
   line-height: 1;
 }
 
@@ -25,6 +35,7 @@ h1 {
    AUSZEICHNUNGEN
    ========================================================== */
 
+/* Bildunterschrift: Schrift */
 figcaption {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -36,6 +47,7 @@ figcaption {
    BASIC STYLES
    ========================================================== */
 
+/* Bildunterschrift: Abstand zum Bild */
 figcaption {
   padding: 15px 30px 0 0;
 }
@@ -44,35 +56,153 @@ figcaption {
    LAYOUT
    ========================================================== */
 
+/* Kopf und Inhalt: höchstens 800px breit, mittig */
 header,
 main {
   max-width: 800px;
   margin: 0 auto;
 }
 
+/* Platz über und unter der Headline */
 header {
   padding: 90px 0 15px 0;
 }
 
+/* Abstand zwischen den Beispielen */
+section {
+  padding-bottom: 45px;
+}
+
+/* Headline und Text: Abstand zum Fensterrand */
 h1, div.content {
   padding-left: 30px;
   padding-right: 30px;
 }
 
+/* Abstand zwischen Bild und Text */
 div.content {
   padding-top: 45px;
 }
 
+/* figure ohne den Rand, den sie von sich aus hat */
 figure {
   margin: 0;
 }
 
+
+/* ##########################################################
+   TEIL 2: DIE BEISPIELE
+   Ab hier steht, worum es geht: Bilder nebeneinander (Flexbox)
+   und ein Bild hinter dem Text (Background).
+   Zu jedem Beispiel im HTML gehört hier ein Abschnitt.
+   ########################################################## */
+
 /* ==========================================================
-   BILDER
+   FÜR ALLE BEISPIELE: BILDER
    ========================================================== */
 
+/* jedes Bild ist so breit wie sein Kasten */
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+}
+
+/* ==========================================================
+   BEISPIEL 1: BILD HINTER DEM TEXT
+   ========================================================== */
+
+/* Kasten mit Bild im Hintergrund, der Pfad geht von der CSS-Datei aus */
+.bild-hinter-text {
+  min-height: 300px;
+  background-image: url('../img/shubham-dhage-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5ms
+  
+}
+
+.bild-hinter-text:hover {
+  background-image: url('../img/kevin-grieve-unsplash-2.jpg');
+}
+
+/* Überschrift vor dem Bild, in der Mitte */
+.bild-hinter-text h2 {
+  color: #fff;
+}
+
+/* ==========================================================
+   BEISPIEL 2: ZWEI BILDER NEBENEINANDER
+   ========================================================== */
+
+/* Kasten außen herum: stellt die Bilder nebeneinander */
+.bild-container-ohne-text {
+  display: flex;
+  gap: 10px;
+}
+
+/* die zwei Bilder: beide gleich breit */
+.bild-container-ohne-text img {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* ==========================================================
+   BEISPIEL 3: ZWEI BILDER NEBENEINANDER UND TEXT
+   ========================================================== */
+
+/* Kasten außen herum: stellt die Paare nebeneinander */
+.bild-container-mit-text {
+  display: flex;
+  gap: 10px;
+}
+
+/* ein Paar aus Bild und Text: beide Paare gleich breit */
+.bild-mit-text {
+  flex: 1 1 0;
+}
+
+/* Text unter dem Bild */
+.bild-mit-text p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
+
+/* ==========================================================
+   BEISPIEL 4: ZWEI BILDER, TEXT UND HOVER-EFFEKT
+   ========================================================== */
+
+/* Kasten außen herum: stellt die Paare nebeneinander */
+.bild-container-mit-hover {
+  display: flex;
+  gap: 10px;
+}
+
+/* ein Paar aus Bild und Text: beide Paare gleich breit */
+.bild-mit-hover {
+  flex: 1 1 0;
+}
+
+/* Rahmen um das Bild: schneidet ab, was übersteht */
+.bild-rahmen {
+  overflow: hidden;
+}
+
+/* Bild im Rahmen: wird weich größer, nicht mit einem Sprung */
+.bild-rahmen img {
+  transition: transform 0.3s;
+}
+
+/* Maus über dem Rahmen: Bild wird größer */
+.bild-rahmen:hover img {
+  transform: scale(1.1);
+}
+
+/* Text unter dem Bild */
+.bild-mit-hover p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
 }

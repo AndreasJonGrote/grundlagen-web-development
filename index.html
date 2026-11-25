@@ -1,49 +1,72 @@
-
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meine erste Seite</title>
+  <title>Andreas Jon Grote</title>
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/scripts.js" defer></script>
 </head>
+
 <body>
   <header>
-    <h1>Portfolio von X.</h1>
+    <h1>Flexbox &amp; Background</h1>
   </header>
   <main>
-    <article>
-      
-      <div class="content">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
-        </p>
-        <p>
-          Lorem Impsum
-        </p>
-        <p>
-          Lorem Impsum
-        </p>
-        <p>Hier mein Satz</p>
+
+    <!-- Beispiel 1: das Bild steht nicht im HTML, es kommt als Hintergrund aus dem CSS -->
+    <section>
+      <div class="bild-hinter-text">
+        <h2>Bild hinter dem Text</h2>
       </div>
+    </section>
 
-      <img
-          src="assets/img/dan-otis-OYFHT4X5isg-unsplash.jpg"
-          alt="Abstraktes Titelbild in Grau und Orange">
+    <!-- Beispiel 2: ein Kasten außen herum, darin die zwei Bilder -->
+    <section>
+      <h2>Zwei Bilder nebeneinander</h2>
+      <div class="bild-container-ohne-text">
+        <img src="assets/img/kevin-grieve-unsplash-1.jpg" alt="Bunte Lichter hinter einer Scheibe mit Regentropfen">
+        <img src="assets/img/kevin-grieve-unsplash-2.jpg" alt="Verwischte Boote im Hafen">
+      </div>
+    </section>
 
+    <!-- Beispiel 3: Bild und Text gehören zusammen, darum hat jedes Paar einen eigenen Kasten -->
+    <section>
+      <h2>Zwei Bilder nebeneinander und Text</h2>
+      <div class="bild-container-mit-text">
+        <div class="bild-mit-text">
+          <img src="assets/img/norbert-velescu-unsplash.jpg" alt="Betondecke aus Dreiecken">
+          <p>Text</p>
+        </div>
+        <div class="bild-mit-text">
+          <img src="assets/img/kevin-grieve-unsplash-1.jpg" alt="Bunte Lichter hinter einer Scheibe mit Regentropfen">
+          <p>Text</p>
+        </div>
+      </div>
+    </section>
 
-        <img
-        src="assets/img/dan-otis-OYFHT4X5isg-unsplash.jpg"
-        alt="Abstraktes Titelbild in Grau und Orange">
+    <!-- Beispiel 4: wie Beispiel 3, dazu ein Rahmen um jedes Bild – er schneidet ab, was beim Vergrößern übersteht -->
+    <section>
+      <h2>Zwei Bilder nebeneinander und Text und Hover-Effekt</h2>
+      <div class="bild-container-mit-hover">
+        <div class="bild-mit-hover">
+          <div class="bild-rahmen">
+            <img src="assets/img/kevin-grieve-unsplash-2.jpg" alt="Verwischte Boote im Hafen">
+          </div>
+          <p>Text</p>
+        </div>
+        <div class="bild-mit-hover">
+          <div class="bild-rahmen">
+            <img src="assets/img/norbert-velescu-unsplash.jpg" alt="Betondecke aus Dreiecken">
+          </div>
+          <p>Text</p>
+        </div>
+      </div>
+    </section>
 
-        <img
-        src="assets/img/dan-otis-OYFHT4X5isg-unsplash.jpg"
-        alt="Abstraktes Titelbild in Grau und Orange">
-    </article>
   </main>
 </body>
-</html> 
+
+</html>
